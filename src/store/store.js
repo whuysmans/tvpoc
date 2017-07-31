@@ -31,7 +31,10 @@ export const store = new Vuex.Store({
 	},
 	actions: {
 		updateCurrent: (context, number) => {
-			context.commit('UPDATECURRENT', number)
+			return new Promise( ( resolve, reject ) => {
+				context.commit('UPDATECURRENT', number)
+				resolve()
+			} )
 		},
 		initSlides: (context, slides) => {
 			return new Promise((resolve, reject) => {

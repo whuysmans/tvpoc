@@ -27,7 +27,12 @@
 			    let next = ++current % length
 			    current = next
 			    console.log(next)
-			    this.updateCurrent(next)
+			    this.updateCurrent(next).then( () => {
+				    if( this.skipSlide ) {
+					    console.log('between fired')
+					    bus.$emit('slideFinished')
+				    }
+			    } )
 		    })
 	    }
 		    )
@@ -38,6 +43,7 @@
 		    'updateCurrent'
 		    ])
     },
+
     computed: {
 	    ...mapGetters([
 		    'getCurrent',
@@ -45,6 +51,23 @@
 		]),
 	    currentSlide() {
 		    return this.getSlides[this.getCurrent]
+	    },
+	    skipSlide() {
+		    let currentSlide = this.getSlides[this.getCurrent]
+		    if( currentSlide.start && currentSlide.end ) {
+			    console.log('has dates')
+			    const start = new Date( currentSlide.start ).getTime()
+			    const end = new Date( currentSlide.end ).getTime()
+			    const now = new Date().getTime()
+			    
+			    if( start <= now  && now <= end ) {
+				    return false
+			    } else {
+				    return true
+			    }
+		    } else {
+			    return false
+		    }
 	    }
     }
 
