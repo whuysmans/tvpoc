@@ -41,7 +41,17 @@
 <script>
   export default {
 
-    props: ['slide'],
+	  props: {
+		  slide: {
+			  type: Object,
+			  default() {
+				  return {
+					  slideType: '',
+					  dataDuration: 0
+				  }
+			  }
+		  }
+	  },
 
     data() {
 	    return {
