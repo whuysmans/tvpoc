@@ -1,7 +1,7 @@
 <template>
 	<div :class="getClass">
 		<img v-if="item.enclosure" src="item.enclosure.url">
-		<h3 class="custom-rss">{{ item.nstag || item.pubDate }}</h3>
+		<h3 class="custom-rss">{{ item.nstag }}</h3>
 		<h2>{{ item.title }}</h2>
 		<p>{{ item.summary }}</p>
 	</div>

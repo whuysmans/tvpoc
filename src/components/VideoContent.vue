@@ -14,9 +14,7 @@ export default {
 
 	methods: {
 		videoHasEnded() {
-			console.log('ended!')
 			bus.$emit('slideFinished')
-			console.log(bus)
 		}
 	}
 }

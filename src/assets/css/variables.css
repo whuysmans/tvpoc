@@ -1,0 +1,11 @@
+:root {
+  /* Color 1 */
+  --color1-rgb: 255, 255, 255;
+  --color1: rgb(var(--color1-rgb));
+  /* Title Color */
+  --title-color-rgb: 0, 0, 0;
+  --title-color: rgb(var(--title-color-rgb));
+  /* Text Color */
+  --text-color-rgb: 0, 0, 0;
+  --text-color: rgb(var(--text-color-rgb));
+}
