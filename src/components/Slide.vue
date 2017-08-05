@@ -1,11 +1,8 @@
 <template>
   <div class="slide" :data-duration="slide.dataDuration" style="display: block;">
-    <div :class="slide.slideType">
-      {{ slide.content }}
       <video-content 
-	      v-if="slide.slideType == 'slide-video'" 
-	      :src="slide.videoSrc"
-	      :type="slide.videoType" 
+	      v-if="slide.slideType == 'slide--video--design-01'" 
+       	      :slide="slide"
 	      >
       </video-content>
       <custom-content
@@ -34,7 +31,6 @@
        	      :nrColumns="slide.nrColumns"
               >
       </rss-content>
-    </div>
   </div>
 </template>
 

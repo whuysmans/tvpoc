@@ -12,7 +12,9 @@ import GalleryContent from './components/GalleryContent'
 import GalleryItem from './components/GalleryItem'
 import RSSContent from './components/RSSContent'
 import RSSItem from './components/RSSItem'
-require('./assets/css/style.css')
+import VideoElement from './components/VideoElement'
+require('./assets/css/frontend-styles.css')
+require('./assets/css/variables.css')
 
 import { store } from './store/store'
 
@@ -25,6 +27,7 @@ Vue.component('gallery-content', GalleryContent)
 Vue.component('gallery-item', GalleryItem)
 Vue.component('rss-content', RSSContent)
 Vue.component('rss-item', RSSItem)
+Vue.component('video-element', VideoElement)
 Vue.component('App', App)
 
 Vue.config.productionTip = false

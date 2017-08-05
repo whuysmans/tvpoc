@@ -1,11 +1,27 @@
 :root {
-  /* Color 1 */
-  --color1-rgb: 255, 255, 255;
-  --color1: rgb(var(--color1-rgb));
-  /* Title Color */
-  --title-color-rgb: 0, 0, 0;
-  --title-color: rgb(var(--title-color-rgb));
+  --color1: rgb(0, 0, 0);
+  --color2: rgb(255, 0, 0);
+
+
+  --bgcolor1: rgba(255, 255, 255, 1);
+  --bgcolor2: var(--color2);
+
+  /* Title */
+  --title-font-family: 'Oswald', serif;
+  --title-color: rgb(0, 0, 0);
+
   /* Text Color */
-  --text-color-rgb: 0, 0, 0;
-  --text-color: rgb(var(--text-color-rgb));
+  --text-color1: rgb(0, 0, 0);
+
+  --text-color2: #f00;
+
+  --font1-font-family: 'Oswald', Serif;
+  --font2-font-family: 'Open Sans', Serif;
+
+  --interactive-bgcolor1: var(--color2-rgb);
+  --interactive-font1-font-family: 'Oswald', Serif;
+  --interactive-font1-font-weight: 300;
+  --interactive-font2-font-family: 'Oswald', Serif;
+  --interactive-font2-font-weight: 400;
 }
+
